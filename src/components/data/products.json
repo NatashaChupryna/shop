@@ -1,0 +1,65 @@
+[
+  {
+    "id": "id-1",
+    "title": "Serum",
+    "category": "face",
+    "src": "product1@1x.png",
+    "price": 15
+  },
+  {
+    "id": "id-2",
+    "title": "Skin Cream",
+    "category": "face",
+    "src": "product2@1x.png",
+    "price": 10
+  },
+  {
+    "id": "id-3",
+    "title": "Hand Cream",
+    "category": "body",
+    "src": "product3@1x.png",
+    "price": 15
+  },
+  {
+    "id": "id-4",
+    "title": "Body Lotion",
+    "category": "body",
+    "src": "product4@1x.png",
+    "price": 12
+  },
+  {
+    "id": "id-5",
+    "title": "Hair Mask",
+    "category": "hair",
+    "src": "product5@1x.png",
+    "price": 18
+  },
+  {
+    "id": "id-6",
+    "title": "Lip Balm",
+    "category": "face",
+    "src": "product6@1x.png",
+    "price": 5
+  },
+  {
+    "id": "id-7",
+    "title": "Shampoo",
+    "category": "",
+    "src": "product7@1x.png",
+    "price": 12
+  },
+  {
+    "id": "id-8",
+    "title": "Eyes Cream",
+    "category": "face",
+    "src": "product8@1x.png",
+    "price": 15
+  },
+  {
+    "id": "id-9",
+    "title": "Hair Conditioner",
+    "category": "hair",
+    "src": "product9@1x.png",
+    "price": 15
+  }
+]
