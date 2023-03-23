@@ -20,8 +20,6 @@ export function Header({ cart, onDelete }) {
     <StyledHeader>
       <Logo>everist</Logo>
       <Navigation>
-        <NavLink>About us</NavLink>
-        <NavLink>Contacts</NavLink>
         <NavLink>
           <FaShoppingCart onClick={() => setCartOpen((cartOpen = !cartOpen))} />
         </NavLink>

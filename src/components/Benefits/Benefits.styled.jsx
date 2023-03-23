@@ -14,11 +14,10 @@ export const BenefitsSection = styled.section`
 export const BenefitsImage = styled.div`
   background-image: url(${background});
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
   width: 240px;
   min-height: 250px;
   @media screen and (min-width: 768px) {
-    background-size: cover;
     height: 550px;
     width: 500px;
   }
@@ -30,6 +29,7 @@ export const BenefitsText = styled.div`
   align-items: center;
   width: 200px;
   gap: 10px;
+  padding: 10px 5px 10px 10px;
 
   @media screen and (min-width: 768px) {
     gap: 20px;

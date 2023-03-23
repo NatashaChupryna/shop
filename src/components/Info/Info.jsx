@@ -18,7 +18,9 @@ export function Info() {
           Our products are thoughtfully designed, inside and out, as is the way
           we do business.
         </InfoText1>
-        <Button>Shop now</Button>
+        <Button>
+          Shop now<a href="#products">.</a>
+        </Button>
       </InfoText>
     </InfoSection>
   );

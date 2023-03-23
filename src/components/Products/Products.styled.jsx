@@ -13,7 +13,6 @@ export const ProductList = styled.ul`
   }
 `;
 export const Product = styled.li`
-  /* flex-basis: calc((100% - 30px) / 2); */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -35,6 +34,7 @@ export const Button = styled.button`
   font-weight: 600;
   letter-spacing: 1px;
   padding: 4px 8px;
+  color: black;
   outline: 0;
   border: 1px solid black;
   cursor: pointer;

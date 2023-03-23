@@ -17,9 +17,12 @@ export const InfoImage = styled.div`
   width: 240px;
   min-height: 250px;
   @media screen and (min-width: 768px) {
-    background-size: cover;
+    background-size: 410px;
     width: 500px;
     height: 550px;
+  }
+  @media screen and (min-width: 1200px) {
+    background-size: cover;
   }
 `;
 
@@ -58,6 +61,7 @@ export const Button = styled.button`
   font-size: 16px;
   font-weight: 600;
   letter-spacing: 1px;
+  color: black;
   padding: 8px 12px;
   outline: 0;
   border: 1px solid black;

@@ -20,7 +20,7 @@ export const HeroInfo = styled.div`
   top: 35%;
   transform: translate(-50%, -35%);
   width: 180px;
-  height: 180px;
+  height: 160px;
   padding: 20px;
   border-radius: 15px;
   background: rgb(254, 254, 255);

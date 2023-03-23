@@ -8,6 +8,7 @@ import { Rewards } from './Rewards/ Rewards';
 import { Footer } from './Footer/Footer';
 import products from './data/products';
 import { useState } from 'react';
+import toast, { Toaster } from 'react-hot-toast';
 
 export const App = () => {
   let [order, setOrder] = useState([]);
@@ -23,6 +24,11 @@ export const App = () => {
     if (!itemInArray) {
       setOrder([...order, { ...item }]);
     }
+    toast.success('product added to the cart', {
+      style: {
+        background: '#fbf6f0',
+      },
+    });
   };
 
   const deleteProduct = id => {
@@ -44,7 +50,6 @@ export const App = () => {
     }
   };
 
-  console.log(filter);
   return (
     <>
       <Header cart={order} onDelete={deleteProduct} />
@@ -57,6 +62,7 @@ export const App = () => {
         <Rewards />
         <Footer />
       </div>
+      <Toaster />
     </>
   );
 };
