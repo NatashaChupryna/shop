@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, forwardRef } from 'react';
 import { Modal } from 'components/Modal/Modal';
 import {
   ProductList,
@@ -9,14 +9,14 @@ import {
   ProductPrice,
 } from './Products.styled';
 
-export function Products({ products, onAdd }) {
+function Products({ products, onAdd, ref }) {
   const [openModal, setOpenModal] = useState(false);
 
   const toggleModal = () => {
     setOpenModal(prevState => !prevState);
   };
   return (
-    <ProductList id="products">
+    <ProductList id="products" ref={ref}>
       {products.map(product => (
         <Product key={product.id}>
           <Img
@@ -46,3 +46,5 @@ export function Products({ products, onAdd }) {
     </ProductList>
   );
 }
+
+export default forwardRef(Products);

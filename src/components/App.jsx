@@ -3,16 +3,17 @@ import { HeroSection } from './Hero/Hero';
 import { Info } from './Info/Info';
 import { Benefits } from './Benefits/Benefits';
 import { Filter } from './Filter/Filter';
-import { Products } from './Products/Products';
+import Products from './Products/Products';
 import { Rewards } from './Rewards/ Rewards';
 import { Footer } from './Footer/Footer';
 import products from './data/products';
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import toast, { Toaster } from 'react-hot-toast';
 
 export const App = () => {
   let [order, setOrder] = useState([]);
   let [filter, setFilter] = useState(products);
+  const ref = useRef();
 
   const addOrder = item => {
     let itemInArray = false;
@@ -50,15 +51,33 @@ export const App = () => {
     }
   };
 
+  // const changeQuantityInCart = id => {
+  //   return order.map(item => {
+  //     if (item.id === id) {
+  //       return setOrder(prevOrder => [
+  //         { ...prevOrder, count: prevOrder.count + 1 },
+  //       ]);
+  //     }
+  //   });
+  // }; // fix change quantity in cart method later
+
+  const scrollClick = () => {
+    return ref.current?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
     <>
-      <Header cart={order} onDelete={deleteProduct} />
+      <Header
+        cart={order}
+        onDelete={deleteProduct}
+        // onChange={changeQuantityInCart}
+      />
       <div className="container">
         <HeroSection />
-        <Info />
+        <Info scroll={scrollClick} />
         <Benefits />
         <Filter filter={chooseCategory} />
-        <Products products={filter} onAdd={addOrder} />
+        <Products products={filter} onAdd={addOrder} ref={ref} />
         <Rewards />
         <Footer />
       </div>

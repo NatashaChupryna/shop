@@ -8,7 +8,7 @@ import {
   Button,
 } from './Info.styled';
 
-export function Info() {
+export function Info({ scroll }) {
   return (
     <InfoSection>
       <InfoImage></InfoImage>
@@ -18,7 +18,7 @@ export function Info() {
           Our products are thoughtfully designed, inside and out, as is the way
           we do business.
         </InfoText1>
-        <Button>
+        <Button onClick={scroll}>
           Shop now<a href="#products">.</a>
         </Button>
       </InfoText>
